@@ -1,0 +1,25 @@
+{
+    // General VS Code settings
+    "workbench.colorTheme": "Default Dark+", // Color theme
+    "files.autoSave": "afterDelay", // Auto-save files after a short delay
+    "editor.tabSize": 4, // Tab size (4 spaces is the Python standard)
+    "editor.insertSpaces": true, // Use spaces instead of tabs
+    "editor.wordWrap": "on", // Enable word wrap
+
+    // Python-specific settings
+    "python.pythonPath": "python", // Path to the Python interpreter
+    "python.linting.enabled": true, // Enable linting
+    "python.linting.pylintEnabled": true, // Use Pylint as the linter
+    "python.linting.flake8Enabled": false, // Disable Flake8 (optional)
+    "python.formatting.provider": "black", // Use Black for automatic formatting
+    "python.formatting.blackArgs": ["--line-length", "88"], // Black configuration
+    "python.languageServer": "Pylance", // Use Pylance as the language server
+
+    // Code Runner settings (for executing code)
+    "code-runner.runInTerminal": true, // Run code in the integrated terminal
+    "code-runner.executorMap": {
+        "python": "cls && python -u" // Clear terminal and run Python
+    },
+    "code-runner.clearPreviousOutput": true, // Clear previous output
+    "code-runner.saveFileBeforeRun": true // Save file before running
+}
