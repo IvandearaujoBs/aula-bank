@@ -28,6 +28,7 @@ constructor(
         
         showBalance(): void {
             console.log(this.bank.getName())
+            console.log('TITULAR:', this.holder);
             console.log('AG:', this.agency, 'C/C:', this.id)
             console.log('-'.repeat(40) )
             console.log('15/03/2025 SALDO R$', this.balance)
