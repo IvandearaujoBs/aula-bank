@@ -1,12 +1,11 @@
 export class Bank {
-    private id: number;
-    private name: string;
+    private id: number
+    private name: string
 
     constructor(id: number, name: string) {
-    console.log("Bank()");
 
-    this.id = id;
-    this.name = name;
+    this.id = id
+    this.name = name
     }
 
   // GETTER,
@@ -31,12 +30,5 @@ export class Bank {
     this.name = name;
     }
 }
-          //new, instancia, local reservado na memoria
-const b1 = new Bank(990, "BANCO SIMPLEX S/A");
-let b2 = new Bank(995, "BANCO TOTAL S/A"); //(argumentos)
 
-b1.setId(104);
-b1.setName("CAIXA ECONÔMICA FEDERAL");
-
-console.log("Cod  Banco:", b1.getId());
-console.log("Nome Banco:", b1.getName());
+export const bank = new Bank(255, 'BANCO UZUMAKI S/A')
