@@ -1,35 +1,29 @@
-export class Bank {
-    private id: number
-    private name: string
+import { Account } from "./account"
+   
+    export class Bank {
+    public readonly id: number
+    public readonly name: string
+    public readonly accounts: Account[]
+
     
     constructor(id: number, name: string) {
     this.id = id
     this.name = name
-    }
+    this.accounts = []
+   }
 
-  // GETTER,
-    getId(): number {
-        return this.id
-    }
+   createAccount(accountId: number, accountAgency:number, accountHolder: string): void{
+        const account = new Account(this, accountId, accountAgency, accountHolder)
+        this.accounts.push(account)
 
-  // SETTER
-    setId(id: number): void {
-    if(id > 0) {
-    this.id = id;
-    
-    }
-  }
-
-  // GETTER
-    getName(): string {
-    return this.name
-    }
-
-  // SETTER
-    setName(name: string): void {
-    this.name = name
-    
-  }
+   }
+  
+   showAccounts()void {
+    console.log(this.name)
+    console.log('RELAÇÃO DE CONTAS')
+    console.log('-'.repeat(40))
+    console.log('AG   CONTA   TITULAR')
+    console.log('---- ----- --------------------------')
+   }
 }
 
-export const bank = new Bank(255, 'BANCO FALÊNCIA S/A')
