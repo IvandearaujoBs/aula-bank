@@ -13,7 +13,10 @@ a1.showBalance()
 a2.showBalance()
 a3.showBalance()*/
 
-let bank = new Bank(999, "BANCO EXEMPLO S/A")
+const bank = new Bank(999, "BANCO EXEMPLO S/A")
 
 bank.createAccount(11255, 555, 'pedro coelho')
+bank.createAccount(98765, 123, 'BELTRANO DA SILVA')
+bank.createAccount(82366, 333, 'CICRANO OLIVEIRA')
 
+bank.showAccounts()
