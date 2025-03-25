@@ -1,4 +1,5 @@
 import { Account } from "./account"
+import{ formatText } from './utis'
    
     export class Bank {
     public readonly id: number
@@ -18,11 +19,12 @@ import { Account } from "./account"
 
    }
   
-   showAccounts()void {
+   showAccounts():void {
     console.log(this.name)
     console.log('RELAÇÃO DE CONTAS')
     console.log('-'.repeat(40))
     console.log('AG   CONTA   TITULAR')
+    console.log(formatText('AG\tCONTA\tTITULAR', [-5, -7, 28]))
     console.log('---- ----- --------------------------')
    }
 }

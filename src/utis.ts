@@ -1,5 +1,5 @@
 
-function formatText(data: string, colwidths: number[]): string {
+export function formatText(data: string, colwidths: number[]): string {
     const coluns = data.split('\t')
     let formatedText = ''
 

@@ -8,10 +8,11 @@ export class Account {
     private balance: number
 
 constructor(
+         bank: Bank,
          id: number, 
          agency: number, 
          holder: string
-    ){
+    ) {
         this.bank = bank
         this.id = id
         this.agency = agency
@@ -35,9 +36,8 @@ constructor(
         
         showBalance(): void {
             console.log(this.bank.name)
-            console.log('TITULAR:', this.holder);
             console.log('AG:', this.agency, 'C/C:', this.id)
-            console.log('-'.repeat(40) )
+            console.log('-'.repeat(40))
             console.log('15/03/2025 SALDO R$', this.balance)
             console.log('-'.repeat(40))
             console.log()
