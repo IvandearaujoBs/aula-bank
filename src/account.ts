@@ -1,4 +1,5 @@
 import { Bank } from "./bank"
+import { alignLine, alignText } from "./utis"
 
 export class Account {
     public readonly bank: Bank 

@@ -1,4 +1,4 @@
-import { Account } from './account'
+
 import { Bank } from './bank'
 
 /*const a1 = new Account(123000, 25, "fulano de tal");
@@ -20,3 +20,5 @@ bank.createAccount(98765, 123, 'BELTRANO DA SILVA')
 bank.createAccount(82366, 333, 'CICRANO OLIVEIRA')
 
 bank.showAccounts()
+const ac1 = bank.getAccount(224, 325841)
+ac1?.showBalance()

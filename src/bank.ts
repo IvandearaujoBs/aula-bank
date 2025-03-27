@@ -1,5 +1,5 @@
-import { Account } from "./account"
-import{ formatText } from './utis'
+import { Account } from './account';
+import{ alignLine, alignText } from './utis'
    
     export class Bank {
     public readonly id: number
@@ -13,19 +13,33 @@ import{ formatText } from './utis'
     this.accounts = []
    }
 
-   createAccount(accountId: number, accountAgency:number, accountHolder: string): void{
-        const account = new Account(this, accountId, accountAgency, accountHolder)
+   createAccount(agency: number, id: number, accountHolder: string): void{
+        const account = new Account(this, id, agency, accountHolder)
         this.accounts.push(account)
 
    }
+
+   getAccount(agency: number, id: number): Account | undefined {
+     for (const account of this.accounts){
+          if(account.agency === agency && account.id === id){
+               return account
+          }
+     }
+     return undefined
+   }
   
    showAccounts():void {
-    console.log(this.name)
-    console.log('RELAÇÃO DE CONTAS')
-    console.log('-'.repeat(40))
-    console.log('AG   CONTA   TITULAR')
-    console.log(formatText('AG\tCONTA\tTITULAR', [-5, -7, 28]))
-    console.log('---- ----- --------------------------')
+    console.log(alignText(this.name, ['40']))
+    console.log(alignText('RELAÇÃO DE CONTAS', ['40']))
+    console.log(alignLine([40]))
+    console.log(alignText('AG\tCONTA\tTITULAR', ['<4', '<6', '<28' ]))
+    console.log(alignLine([4, 6, 28]))
+
+    for (const account of this.accounts){
+     const text =`${account.agency}\t${account.id}\t${account.holder}`
+     console.log(alignText(text, ['>4', '>6', '<28']))
+    }
+    console.log(alignLine([40]))
    }
 }
 
