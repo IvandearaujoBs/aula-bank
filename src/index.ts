@@ -1,24 +1,21 @@
+import { Bank } from "./bank";
 
-import { Bank } from './bank'
+console.log("** BEGIN **");
 
-/*const a1 = new Account(123000, 25, "fulano de tal");
-const a2 = new Account(1552811, 62, "beltrano fela da gaita");
-const a3 = new Account(32345222, 37, "cicrano beltrano");
+const bank = new Bank(999, "BANCO EXEMPLO S/A");
 
-a1.deposit(1000.000)
-a2.withdraw(200.00)
-a3.transfer(300.00, a2)
+const a1 = bank.createAccount(987, 12345, "FULANO DE CASTRO");
+const a2 = bank.createAccount(123, 98765, "BELTRANO DA SILVA");
+const s3 = bank.createAccount(123, 98765, "BELTRANO DA SILVA", 1000.0);
 
-a1.showBalance()
-a2.showBalance()
-a3.showBalance()*/
+// bank.showAccounts()
 
-const bank = new Bank(999, "BANCO EXEMPLO S/A")
+// ac1.showBalance()
+a1.deposit(1500.0);
+a1.withdraw(500.0);
+a1.transfer(300.0, s3);
 
-bank.createAccount(11255, 555, 'pedro coelho')
-bank.createAccount(98765, 123, 'BELTRANO DA SILVA')
-bank.createAccount(82366, 333, 'CICRANO OLIVEIRA')
+a1.showStatement();
+s3.showStatement();
 
-bank.showAccounts()
-const ac1 = bank.getAccount(224, 325841)
-ac1?.showBalance()
+console.log("** END **");

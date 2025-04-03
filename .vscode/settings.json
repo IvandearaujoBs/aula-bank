@@ -1,6 +1,6 @@
 {
     // General VS Code settings
-    "workbench.colorTheme": "Dracula At Night", // Color theme
+    "workbench.colorTheme": "Synthwave x Fluoromachine & fixed epic animations & contrast & customized", // Color theme
     "files.autoSave": "afterDelay", // Auto-save files after a short delay
     "editor.tabSize": 4, // Tab size (4 spaces is the Python standard)
     "editor.insertSpaces": true, // Use spaces instead of tabs
