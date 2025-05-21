@@ -38,3 +38,40 @@ Este projeto é uma simulação simples de um sistema bancário, desenvolvido co
 ├── index.ts
 ├── tsconfig.json
 └── README.md
+🚀 Como Executar
+Clone o repositório:
+
+bash
+Copiar
+Editar
+git clone https://github.com/seu-usuario/nome-do-repositorio.git
+Instale as dependências (se necessário):
+
+bash
+Copiar
+Editar
+npm install
+Compile o projeto:
+
+bash
+Copiar
+Editar
+tsc
+Execute o código:
+
+bash
+Copiar
+Editar
+node dist/index.js
+Ou diretamente com ts-node (caso esteja usando):
+
+bash
+Copiar
+Editar
+npx ts-node src/index.ts
+👨‍🏫 Sobre
+Este projeto foi desenvolvido para fins educacionais durante as aulas de POO com TypeScript, como forma de treinar a estruturação de sistemas orientados a objetos de maneira simples e funcional.
+
+nginx
+Copiar
+Editar
